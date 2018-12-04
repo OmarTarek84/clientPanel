@@ -1,0 +1,22 @@
+<div class="parentForm">
+  <div class="form">
+    <div class="logo">
+      <img src="../../assets/img/logo.png" alt="image" />
+    </div>
+    <h3>Login</h3>
+    <div class="errorlogin" *ngIf="logInError">Wrong UserName Or Password</div>
+    <form (ngSubmit)="onSubmitted()" #f="ngForm">
+        <div class="input-field">
+          <input id="email" type="email" class="validate" name="email" ngModel required email>
+          <label for="email">Email</label>
+          <span class="helper-text" data-error="Invalid Email" data-success="Valid"></span>
+        </div>
+        <div class="input-field col s6">
+          <input id="password" type="password" class="validate" name="password" ngModel required minlength="6">
+          <label for="password">Password</label>
+          <span class="helper-text" data-error="Should Be At Least 6 Characters" data-success="Valid"></span>
+        </div>
+        <button class="btn blue waves-effect waves-light" type="submit" [disabled]="loginForm.invalid">Submit</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="clientDetails">
+    <a routerLink="/clients"><i class="fa fa-arrow-left"></i>Back To DashBoard</a>
+
+    <div class="buttons">
+      <a [routerLink]="[ '/edit-client/' + id ]" class="btn grey waves-effect waves-light">Edit</a>
+      <a (click)="onDelete()" class="btn red waves-effect waves-light">Delete</a>
+    </div>
+
+    <div class="details">
+      <div class="title">Add Client</div>
+      <div class="flex">
+        <h4>Client ID: {{client.id}}</h4>
+        <h6>Balance: <span [class.green-text]="!hasBalance" [class.red-text]="hasBalance">${{client.balance}}</span><i (click)="display()" class="fa fa-pencil"></i></h6>
+        <div class="update" *ngIf="updateDisplayed">
+          <form (ngSubmit)="onUpdated()" #f="ngForm">
+            <input type="number" required [ngModel]="balanceNow" class="browser-default" name="balance" />
+            <button class="btn blue waves-effect waves-light" type="submit">Update</button>
+          </form>
+        </div>
+    </div>
+      <div class="detail">
+        <p class="email">Contact Email: {{client.email}}</p>
+        <p class="phone">Contact Phone: {{client.phone}}</p>
+      </div>
+    </div>
+</div>

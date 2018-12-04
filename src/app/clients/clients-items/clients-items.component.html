@@ -1,0 +1,37 @@
+<div class="clients-flex">
+
+  <div class="title">
+    <h4><i class="fa fa-group"></i>Clients</h4>
+  </div>
+
+  <div class="info">
+    <p>Total Owed: {{total | currency}}</p>
+  </div>
+
+  <div class="button">
+    <a routerLink="/add-client" class="btn green waves-effect waves-light"><i class="fa fa-plus"></i>Add New CLient</a>
+  </div>
+
+</div>
+
+<table class="striped centered highlight">
+    <thead class="black white-text">
+      <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Balance</th>
+          <th></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr *ngFor="let client of clients; let i = index">
+        <td>{{client.firstname}} {{client.lastname}}</td>
+        <td>{{client.email}}</td>
+        <td>{{client.balance | currency}}</td>
+        <td>
+          <a class="Button btn waves-effect waves-light" [routerLink]="[ '/clients/client', i ]"><i class="fa fa-minus"></i>Details</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>

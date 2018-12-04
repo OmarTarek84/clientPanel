@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="settings">
+    <a routerLink="/clients"><i class="fa fa-arrow-left"></i>Back To DashBoard</a>
+    <form class="form" (ngSubmit)="onChanged()" #f="ngForm">
+      <div class="title">Settings</div>
+        <label>
+          <input type="checkbox" name="registration" [ngModel]="settings.allowRegistration" class="filled-in" (change)="settings.allowRegistration = !settings.allowRegistration" />
+          <span>Allow Registration</span>
+        </label>
+        <label>
+          <input type="checkbox" name="balanceadd" [ngModel]="settings.disableBalanceOnAdd" class="filled-in" (change)="settings.disableBalanceOnAdd = !settings.disableBalanceOnAdd" />
+          <span>Disable Balance On Add</span>
+        </label>
+        <label>
+          <input type="checkbox" name="balanceedit" [ngModel]="settings.disableBalanceOnEdit" class="filled-in" (change)="settings.disableBalanceOnEdit = !settings.disableBalanceOnEdit" />
+          <span>Disable Balance On Edit</span>
+        </label>
+        <div class="buttonnn">
+          <button class="btn blue waves-effect waves-light" type="submit">Submit</button>
+        </div>
+    </form>
+  </div>
+</div>

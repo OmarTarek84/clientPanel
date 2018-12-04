@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="editClient">
+    <a routerLink="/clients"><i class="fa fa-arrow-left"></i>Back To DashBoard</a>
+    <form class="form" (ngSubmit)="onEdited()" #f="ngForm">
+      <div class="title">Add Client</div>
+      <div class="input-field">
+        <input id="first_name" placeholder="first name" type="text" class="validate" required [ngModel]="firstName1" name="first">
+        <span class="helper-text" data-error="required"></span>
+      </div>
+      <div class="input-field">
+        <input id="last_name" placeholder="last name" type="text" class="validate" required [ngModel]="lastName1" name="last">
+        <span class="helper-text" data-error="required"></span>
+      </div>
+      <div class="input-field">
+        <input id="email" type="email" placeholder="email" class="validate" required [ngModel]="email" email name="email">
+        <span class="helper-text" data-error="Email is Invalid"></span>
+      </div>
+      <div class="input-field">
+        <input id="phone" type="text" placeholder="phone" class="validate" required [ngModel]="phone" name="phone">
+        <span class="helper-text" data-error="required"></span>
+      </div>
+      <div class="input-field">
+        <input id="balance" type="number" placeholder="balance" class="validate" required [ngModel]="balance" name="balance" [disabled]="atdisabled">
+        <span class="helper-text" data-error="required"></span>
+      </div>
+      <div class="submitt">
+        <button class="btn blue waves-effect waves-light" type="submit" [disabled]="editForm.invalid">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

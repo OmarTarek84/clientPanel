@@ -1,0 +1,9 @@
+nav {
+    background-color: rgb(179, 179, 179);
+}
+
+@media(max-width: 768px) {
+    nav .brand-logo {
+        font-size: 23px;
+    }
+}

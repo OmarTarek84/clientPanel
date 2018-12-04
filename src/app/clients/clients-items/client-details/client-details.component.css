@@ -1,0 +1,95 @@
+.clientDetails {
+    margin-top: 20px;
+}
+
+.clientDetails a .fa-arrow-left {
+    padding-right: 8px;
+}
+
+.clientDetails .flex {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.clientDetails .flex h4 {
+    flex: 0 0 40%;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .clientDetails .flex h4 {
+        font-size: 16px;
+    }
+}
+
+.clientDetails .flex h6 {
+    flex: 0 0 60%;
+    margin: 0;
+    text-align: right;
+    align-self: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.clientDetails .flex h6 i {
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.clientDetails .flex .update {
+    flex: 0 0 100%;
+    margin-left: auto;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.clientDetails .flex .update form input {
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: none;
+    outline: none;
+}
+
+.clientDetails .flex .update form button {
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+.clientDetails .buttons {
+    display: inline;
+    float: right;
+    clear: both;
+}
+
+.clientDetails .buttons a {
+    border-radius: 4px;
+}
+
+.clientDetails .details {
+    border: 1px solid darkgray;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.clientDetails .details .title {
+    background-color: rgb(214, 214, 214);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 14px;
+}
+
+.clientDetails h4,
+.clientDetails .collection {
+    padding: 10px;
+}
+.clientDetails .details .detail {
+    padding: 0 10px 10px 10px;
+}
+.clientDetails .details .detail p{
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 10px;
+    padding: 10px;
+}

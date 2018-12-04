@@ -1,0 +1,83 @@
+.clients-flex {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+@media(max-width: 768px) {
+    .clients-flex {
+        flex-wrap: wrap;
+    }    
+}
+
+.clients-flex .title {
+    flex: 0 0 20%;
+}
+
+@media(max-width: 768px) {
+    .clients-flex .title {
+        flex: 0 0 100%;
+        text-align: center;
+    }    
+}
+
+.clients-flex .info {
+    flex: 0 0 20%;
+    position: absolute;
+    right: 250px;
+}
+
+@media(max-width: 768px) {
+    .clients-flex .info {
+        flex: 0 0 47%;
+        position: initial;
+    }
+    .clients-flex .info p {
+        font-size: 17px;
+    }
+}
+
+.clients-flex .info p {
+    color: rgb(92, 91, 91);
+    font-weight: 600;
+    font-size: 21px;
+}
+
+.clients-flex .button {
+    flex: 0 0 20%;
+    position: absolute;
+    right: 0;
+}
+
+@media(max-width: 768px) {
+    .clients-flex .button {
+        flex: 0 0 47%;
+        position: initial;
+    }    
+}
+
+.clients-flex .button i {
+    margin-right: 10px;
+}
+
+table {
+    margin-top: 9px;
+}
+
+thead th {
+    font-size: 19.5px;
+}
+
+.fa-minus:before {
+    margin-right: 6px;
+}
+
+.Button {
+    background-color: rgb(235, 228, 228);
+    color: black;
+    font-size: 12px;
+}
+
+.btn i {
+    font-size: 12px;
+}
